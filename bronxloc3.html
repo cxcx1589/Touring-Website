@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>Yankee Stadium</title>
+
+<link rel="stylesheet" type="text/css" href="./css/slideshow.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+.slide1 {
+  background-image: url("./images/yankee1.jpg");
+}
+.slide2 {
+  background-image: url("./images/yankee2.jpg");
+}
+.slide3 {
+  background-image: url("./images/yankee3.jpg");
+}
+.slide4 {
+  background-image: url("./images/yankee4.jpg");
+}
+.slide5 {
+  background-image: url("./images/yankee5.jpg");
+}
+
+
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<!-- info box -->
+<div class="info_box">
+<h1>Yankee Stadium</h1>
+</br>
+Yankee Stadium is a stadium located in the Concourse neighborhood of
+ the Bronx in New York City. It serves as the home ballpark for the New York Yankees
+ of Major League Baseball (MLB), and is also the home park for New York City FC of Major League Soccer
+(MLS). The $2.3 billion stadium, built with $1.2 billion in public subsidies,[17] replaced the original Yankee
+Stadium in 2009. It is located one block north of the original, on the 24-acre (9.7 ha) former site of Macombs Dam Park;
+ the 8-acre (3.2 ha) site of the original stadium is now a public park called Heritage Field.
+</div>
+
+  <div id="arrow-left" class="arrow"></div>
+  <div class="slideshow_title"></div>
+  <div class="slidershow_infobox"></div>
+  <div id="slider">
+
+    <div class="slide-out-button">
+  <i class="	fa fa-angle-left" aria-hidden="true"></i>
+  <div class="slide-out-title"><a class="link" href="bronx.html" style="text-decoration:none">Back</a> </div>
+</div>
+
+
+
+    <div class="slide slide1">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+	<div class="slide slide2">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="slide slide3">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="slide slide4">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="slide slide5">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+  </div>
+  <div id="arrow-right" class="arrow"></div>
+</div>
+
+<script>
+let sliderImages = document.querySelectorAll(".slide"),
+  arrowLeft = document.querySelector("#arrow-left"),
+  arrowRight = document.querySelector("#arrow-right"),
+  current = 0;
+
+// Clear all images
+function reset() {
+  for (let i = 0; i < sliderImages.length; i++) {
+    sliderImages[i].style.display = "none";
+  }
+}
+
+// Init slider
+function startSlide() {
+  reset();
+  sliderImages[0].style.display = "block";
+}
+
+// Show prev
+function slideLeft() {
+  reset();
+  sliderImages[current - 1].style.display = "block";
+  current--;
+}
+
+// Show next
+function slideRight() {
+  reset();
+  sliderImages[current + 1].style.display = "block";
+  current++;
+}
+
+// Left arrow click
+arrowLeft.addEventListener("click", function() {
+  if (current === 0) {
+    current = sliderImages.length;
+  }
+  slideLeft();
+});
+
+// Right arrow click
+arrowRight.addEventListener("click", function() {
+  if (current === sliderImages.length - 1) {
+    current = -1;
+  }
+  slideRight();
+});
+
+startSlide();
+
+</script>
+</body>
+</html>

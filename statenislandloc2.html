@@ -1,0 +1,173 @@
+<html>
+<head>
+<title>Chinese Garden</title>
+
+<link rel="stylesheet" type="text/css" href="./css/slideshow.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+
+.slide1 {
+  background-image: url("./images/statenislandloc2_image1.jpg");
+}
+.slide2 {
+  background-image: url("./images/statenislandloc2_image2.jpg");
+}
+.slide3 {
+  background-image: url("./images/statenislandloc2_image3.jpg");
+}
+.slide4 {
+  background-image: url("./images/statenislandloc2_image4.jpg");
+}
+.slide5 {
+  background-image: url("./images/statenislandloc2_image5.jpg");
+}
+.slide6 {
+  background-image: url("./images/statenislandloc2_image6.jpg");
+}
+.slide7 {
+  background-image: url("./images/statenislandloc2_image7.jpg");
+}
+.slide8 {
+  background-image: url("./images/statenislandloc2_image8.jpg");
+}
+
+
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<!-- info box -->
+<div class="info_box">
+<h1>Chinese Garden</h1></br>
+The New York Chinese Scholar&#44;s Garden adds new dimension to our understanding of life in ancient China and serves as the 
+perfect setting for a host of multicultural events. It features magnificent rockery that resemble mountains that inspired 
+the poetry and paintings of Confucian, Buddhist and Taoist monks and other scholars. Visitors can explore eight pavilions, 
+a bamboo forest path, waterfalls, a Koi-filled pond, Chinese calligraphy, and a variety of Ghongshi scholar&#44;s rocks including
+a 15-foot formation that towers over the central courtyard.</br>
+SPRING: March 12 &#45; April 2, 2018 Friday &#45; Sunday, 10 AM &#45; 5 PM | Closed April 1</br>
+SUMMER: April 3 &#45; November 4, 2018 Tuesday &#45; Sunday, 10 AM &#45; 5 PM</br>
+AUTUMN: November 6 &#45; November 25, 2018 Tuesday &#45; Sunday, 10 AM &#45; 4 PM | Closed November 22 & 23, 2018</br>
+WINTER: November 30, 2018 &#45; March 11, 2019 Friday &#45; Sunday, 10 AM &#45; 4 PM  | Closed December 24 & 25
+</div>
+
+
+  <div id="arrow-left" class="arrow"></div>
+  <div class="slideshow_title"></div>
+  <div class="slidershow_infobox"></div>
+  <div id="slider">
+  
+<div class="slide-out-button">
+	<i class="	fa fa-angle-left" aria-hidden="true"></i>
+	<div class="slide-out-title"><a href="statenisland.html" style="text-decoration:none">Back</a> </div>
+</div>
+  
+    <div class="slide slide1">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+  
+	<div class="slide slide2">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+	
+    <div class="slide slide3">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="slide slide4">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="slide slide5">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+  
+	<div class="slide slide6">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+	
+    <div class="slide slide7">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="slide slide8">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+	
+  </div>
+  <div id="arrow-right" class="arrow"></div>
+</div>
+
+<script>
+let sliderImages = document.querySelectorAll(".slide"),
+  arrowLeft = document.querySelector("#arrow-left"),
+  arrowRight = document.querySelector("#arrow-right"),
+  current = 0;
+
+// Clear all images
+function reset() {
+  for (let i = 0; i < sliderImages.length; i++) {
+    sliderImages[i].style.display = "none";
+  }
+}
+
+// Init slider
+function startSlide() {
+  reset();
+  sliderImages[0].style.display = "block";
+}
+
+// Show prev
+function slideLeft() {
+  reset();
+  sliderImages[current - 1].style.display = "block";
+  current--;
+}
+
+// Show next
+function slideRight() {
+  reset();
+  sliderImages[current + 1].style.display = "block";
+  current++;
+}
+
+// Left arrow click
+arrowLeft.addEventListener("click", function() {
+  if (current === 0) {
+    current = sliderImages.length;
+  }
+  slideLeft();
+});
+
+// Right arrow click
+arrowRight.addEventListener("click", function() {
+  if (current === sliderImages.length - 1) {
+    current = -1;
+  }
+  slideRight();
+});
+
+startSlide();
+	
+</script>
+</body>
+</html>

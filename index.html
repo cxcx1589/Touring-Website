@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Main</title>
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/font.css">
+<style>
+
+html, body{
+overflow:hidden;
+}
+
+body{
+	background-image:url(./images/skyline1.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-size:100% 100vh;
+	width:100%;
+	height:100%;
+	z-index: 1;
+}
+
+<!-- https://stackoverflow.com/questions/819336/how-to-preload-images-without-javascript might need this for latter -->
+
+</style>
+</head>
+<body>
+
+<!-- left social media bar code -->
+<div class="social">
+	<ul>
+		<li><a target="_blank" href="http://www.facebook.com" class="icon-facebook"></a></li>
+		<li><a target="_blank" href="http://www.twitter.com" class="icon-twitter"></a></li>
+		<li><a target="_blank" href="https://plus.google.com/discover" class="icon-google-plus"></a></li>
+		<li><a target="_blank" href="http://www.pinterest.com" class="icon-pinterest"></a></li>		
+	</ul>
+</div>
+
+<div class="top_graphic"></div>
+
+
+<div class="left_side"></div>
+
+<div class="center_side">
+<!-- Menu Bar Code --!>
+<!-- https://www.youtube.com/watch?v=rgUp302f_lY learn to do drop down menu from this video. I tried the div way but it was too complicated-->
+<nav>
+	<a href="index.html"><img src="./images/nyclogo_trans.gif" alt="nyclogo" style="width:45px;float:left"></a>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="manhattan.html">Manhattan</a>
+			<ul>
+				<li><a href="manhattanloc1.html">911 Memorial</a></li>
+				<li><a href="manhattanloc2.html">Broadway Theater</a></li>
+				<li><a href="manhattanloc3.html">Central Park</a></li>
+				<li><a href="manhattanloc4.html">Metropolitan Museum of Art</a></li>
+			</ul>
+		</li>
+		<li><a href="bronx.html">Bronx</a>
+			<ul>
+				<li><a href="bronxloc1.html">Bronx Zoo</a></li>
+				<li><a href="bronxloc2.html">Bronx Botanical Garden</a></li>
+				<li><a href="bronxloc3.html">Yankee Stadium</a></li>
+				<li><a href="bronxloc4.html">Pelham Bay Park</a></li>
+			</ul>
+		</li>
+		<li><a href="brooklyn.html">Brooklyn</a>
+			<ul>
+				<li><a href="brooklynloc1.html">Brooklyn Botanical Garden</a></li>
+				<li><a href="brooklynloc2.html">Prospect Park</a></li>
+				<li><a href="brooklynloc3.html">Brooklyn Museum</a></li>
+				<li><a href="brooklynloc4.html">Brooklyn Bridge</a></li>
+			</ul>
+		</li>
+		<li><a href="queens.html">Queens</a>
+			<ul>
+				<li><a href="queensloc1.html">New York Hall of Science</a></li>
+				<li><a href="queensloc2.html">Citi Field</a></li>
+				<li><a href="queensloc3.html">Rockaway Beach</a></li>
+				<li><a href="queensloc4.html">Jamaica Bay Wildlife Refuge</a></li>
+			</ul>
+		</li>
+		<li><a href="statenisland.html">Staten Island</a>
+			<ul>
+				<li><a href="statenislandloc1.html">Alice Austen House</a></li>
+				<li><a href="statenislandloc2.html">Chinese Garden</a></li>
+				<li><a href="statenislandloc3.html">George Theater</a></li>
+				<li><a href="statenislandloc4.html">Staten Island Ferry</a></li>
+			</ul>
+		</li>
+		<li><a href="contactus.html">Contact Us</a></li>		
+	</ul>
+</nav>
+
+
+
+<div class="center_bottom_left">
+<!-- https://github.com/davidjbradshaw/image-map-resizer use this to adjust image map when the picture is resized-->
+<!-- https://www.image-map.net/ used this to get the coords for map image -->
+
+
+<img class="map_images" style="width:100%" src="./images/nyc_map_trans.png" alt="nyc_map" usemap="#borough_map">
+
+<map name="borough_map">
+    <area onmouseout="nyc_info()" onmouseover="update_brooklyn_info()" alt="Brooklyn" title="brooklyn" href="brooklyn.html" coords="937,788,926,727,995,735,1014,770,1044,788,1058,836,1092,878,1132,966,1234,916,1264,1030,1246,1066,1256,1121,1220,1143,1168,1209,1158,1258,1132,1291,1180,1293,1207,1382,1149,1406,1088,1379,1022,1406,819,1443,767,1396,836,1380,816,1363,810,1327,722,1299,675,1241,698,1148,744,1074,792,1035,758,1007,722,966,761,916,797,930,822,881,868,864,909,853" shape="poly">
+    <area onmouseout="nyc_info()" onmouseover="update_statenisland_info()" alt="Statenisland" title="statenisland" href="statenisland.html" coords="534,1127,545,1110,573,1110,611,1136,603,1193,642,1271,664,1287,661,1303,504,1505,471,1531,408,1581,210,1678,31,1742,13,1682,56,1529,116,1486,142,1484,163,1456,174,1409,180,1344,204,1300,188,1264,186,1206,226,1124,321,1135,425,1134,480,1121,474,1115" shape="poly">
+    <area onmouseout="nyc_info()" onmouseover="update_queens_info()" alt="queens" title="Queens" href="queens.html" coords="1041,576,1092,527,1132,542,1185,566,1237,545,1270,511,1358,490,1381,476,1460,501,1507,483,1554,519,1614,556,1752,682,1754,754,1672,806,1677,1078,1636,1126,1575,1175,1551,1196,1553,1224,1562,1252,1623,1255,1636,1329,1009,1530,1019,1456,1081,1439,1127,1425,1176,1417,1223,1395,1213,1339,1234,1299,1249,1236,1201,1232,1202,1188,1254,1145,1297,1136,1276,1090,1260,1062,1270,1028,1243,900,1140,947,1102,877,1055,795,1028,764,994,725,931,714,993,630,1015,580" shape="poly">
+    <area onmouseout="nyc_info()" onmouseover="update_manhattan_info()" alt="manhattan" title="Manhattan" href="manhattan.html" coords="761,892,785,667,978,276,1034,171,1056,177,1094,188,1034,283,1019,360,1019,448,1033,503,992,551,997,584,910,711,896,809,887,850" shape="poly">
+    <area onmouseout="nyc_info()" onmouseover="update_bronx_info()" alt="bronx" title="Bronx" href="bronx.html" coords="1085,5,1251,71,1257,44,1315,61,1309,97,1361,115,1523,170,1546,291,1484,335,1430,284,1394,247,1393,302,1400,375,1451,424,1466,466,1405,455,1393,435,1361,448,1336,454,1305,473,1237,482,1213,495,1226,534,1184,553,1132,523,1144,477,1127,474,1097,503,1036,569,1009,553,1041,485,1023,454,1025,371,1034,317,1063,259,1091,214,1107,179,1091,165,1070,174,1052,160" shape="poly">
+</map>
+</div>
+
+<div class="center_bottom_right" id="descriptionbox">
+
+ <video width="100%" height="50%" controls><source src="./video/nycinfo.mp4" type="video/mp4">Your browser does not support the video tag.</video> 
+<h1>New York City</h1></br>
+</p>New York City has been described as the cultural, financial, and media capital of the world, and exerts a significant 
+impact upon commerce, entertainment, research, technology, education, politics, tourism, and sports. The city's fast pace 
+defines the term New York minute. New York City consists of five boroughs, each of which is a separate county of the State 
+of New York. The five boroughs – Brooklyn, Queens, Manhattan, The Bronx, and Staten Island &#45; were consolidated into a single 
+city in 1898. The city and its metropolitan area constitute the premier gateway for legal immigration to the United States. As 
+many as 800 languages are spoken in New York, making it the most linguistically diverse city in the world. </p>
+</div>
+
+
+<div class="right_side"></div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="./jscript/imageMapResizer.min.js"></script>
+<script type="text/javascript">
+
+$('map').imageMapResize();
+
+</script>
+
+<script>
+	function update_queens_info(){
+	document.getElementById("descriptionbox").innerHTML = 
+	"<img width='100%' height='50%' src='./images/queens_mini.jpg' alt='Queens Skyline Picture'>"+
+	"<h1>Queens</h1></br>"+
+	"Queens is the easternmost and largest in area of the five boroughs of New York City. It is geographically "+
+	"adjacent to the borough of Brooklyn at the southwestern end of Long Island, and to Nassau County farther "+
+	"east on Long Island; in addition, Queens shares water borders with the boroughs of Manhattan and the Bronx. "+
+	"Queens was established in 1683 as one of the original 12 counties of New York. "
+	}
+	function update_manhattan_info(){
+	document.getElementById("descriptionbox").innerHTML = 
+	"<img width='100%' height='50%' src='./images/manhattan_mini.jpg' alt='Manhattan Skyline Picture'>"+
+	"<h1>Manhattan</h1></br>"+
+	"Manhattan is the most densely populated borough of New York City, its economic and administrative center, "+
+	"and its historical birthplace. Locally it is often referred to simply as The City. The borough is coextensive "+
+	"with New York County, one of the original counties of the U.S. state of New York. The borough consists mostly "+
+	"of Manhattan Island, bounded by the Hudson, East, and Harlem rivers; several small adjacent islands; and Marble "+
+	"Hill, a small neighborhood now on the U.S. mainland, physically connected to the Bronx and separated from the rest "+
+	"of Manhattan by the Harlem River. Manhattan Island is divided into three informally bounded compartments aligned "+
+	"on its long axis: Midtown Manhattan, Lower Manhattan, and Upper Manhattan.";
+	}
+	function update_brooklyn_info(){
+	document.getElementById("descriptionbox").innerHTML = 
+	"<img width='100%' height='50%' src='./images/brooklyn_mini.jpg' alt='Brooklyn Skyline Picture'>"+
+	"<h1>Brooklyn</h1></br>"+
+	"Brooklyn is the most populous borough of New York City, with a census-estimated 2,648,771 residents in 2017. Named "+
+	"after Dutch city Breukelen, It borders the borough of Queens at the southwestern end of the same Long Island, and has "+
+	"several bridge connections to the nearby boroughs of Staten Island and Manhattan. Since 1896, the borough has been "+
+	"coterminous with Kings County, the most populous county in the U.S. state of New York and the second-most densely "+
+	"populated county in the United States, after the county of New York.";
+	}
+	function update_bronx_info(){
+	document.getElementById("descriptionbox").innerHTML = 
+	"<img width='100%' height='50%' src='./images/bronx_mini.jpg' alt='Bronx Skyline Picture'>"+
+	"<h1>Bronx</h1></br>"+
+	"The Bronx is the northernmost of the five boroughs of New York City, in the U.S. state of New York. It is south of Westchester County; "+
+	"north and east of Manhattan, across the Harlem River; and north of Queens, across the East River. Since 1914, the borough has had the "+
+	"same boundaries as Bronx County, the third-most densely populated county in the United States. The Bronx has a land area of 42 square miles (109 km2) "+
+	"and a population of 1,471,160 in 2017. Of the five boroughs, it has the fourth-largest area, fourth-highest population, and third-highest population "+
+	"density. It is the only borough predominantly on the U.S. mainland.";
+	}
+	function update_statenisland_info(){
+	document.getElementById("descriptionbox").innerHTML = 
+	"<img width='100%' height='50%' src='./images/staten_island_mini.jpg' alt='Staten Island Skyline Picture'>"+
+	"<h1>Staten Island</h1></br>"+
+	"Staten Island is the southernmost of the five boroughs of New York City in the U.S. state of New York. Located "+
+	"in the southwest portion of the city, Staten Island is the southernmost part of both the city and state of New York, "+
+	"with Conference House Park located at the southern tip of the island. The borough is separated from New Jersey by the "+
+	"Arthur Kill and the Kill Van Kull, and from the rest of New York by New York Bay. With a 2017 Census&#45;estimated population "+
+	"of 479,458 Staten Island is the least populated of the boroughs but is the third-largest in land area at 58.5 sq mi (152 km2). "+
+	"Staten Island is the only New York City borough with a non-Hispanic White majority.";
+	}
+	function nyc_info(){
+	document.getElementById("descriptionbox").innerHTML =  "<video width='100%' height='50%' controls><source src='./video/nycinfo.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"+
+	"<h1>New York City</h1></br>"+
+	"</p>New York City has been described as the cultural, financial, and media capital of the world, and exerts a significant "+
+	"impact upon commerce, entertainment, research, technology, education, politics, tourism, and sports. The city&#39;s fast pace "+
+	"defines the term New York minute. New York City consists of five boroughs, each of which is a separate county of the State "+
+	"of New York. The five boroughs – Brooklyn, Queens, Manhattan, The Bronx, and Staten Island &#45; were consolidated into a single "+
+	"city in 1898. The city and its metropolitan area constitute the premier gateway for legal immigration to the United States. As "+
+	"many as 800 languages are spoken in New York, making it the most linguistically diverse city in the world. </p>";
+	}
+	</script>
+
+</body>
+</html>

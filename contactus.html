@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Contact Us</title>
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/font.css">
+<style>
+
+
+body{
+	background-image:url(./images/skyline1.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-size:100% 100vh;
+	width:100%;
+	height:100%;
+	z-index: 1;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- left social media bar code -->
+<div class="social">
+	<ul>
+		<li><a target="_blank" href="http://www.facebook.com" class="icon-facebook"></a></li>
+		<li><a target="_blank" href="http://www.twitter.com" class="icon-twitter"></a></li>
+		<li><a target="_blank" href="https://plus.google.com/discover" class="icon-google-plus"></a></li>
+		<li><a target="_blank" href="http://www.pinterest.com" class="icon-pinterest"></a></li>		
+	</ul>
+</div>
+
+<div class="top_graphic"></div>
+
+
+<div class="left_side"></div>
+
+
+<div class="center_side" style="height:85vh">
+
+<!-- Menu Bar Code --!>
+<!-- https://www.youtube.com/watch?v=rgUp302f_lY learn to do drop down menu from this video. I tried the div way but it was too complicated-->
+<nav>
+	<a href="index.html"><img src="./images/nyclogo_trans.gif" alt="nyclogo" style="width:45px;float:left"></a>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="manhattan.html">Manhattan</a>
+			<ul>
+				<li><a href="manhattanloc1.html">911 Memorial</a></li>
+				<li><a href="manhattanloc2.html">Broadway Theater</a></li>
+				<li><a href="manhattanloc3.html">Central Park</a></li>
+				<li><a href="manhattanloc4.html">Metropolitan Museum of Art</a></li>
+			</ul>
+		</li>
+		<li><a href="bronx.html">Bronx</a>
+			<ul>
+				<li><a href="bronxloc1.html">Bronx Zoo</a></li>
+				<li><a href="bronxloc2.html">Bronx Botanical Garden</a></li>
+				<li><a href="bronxloc3.html">Yankee Stadium</a></li>
+				<li><a href="bronxloc4.html">Pelham Bay Park</a></li>
+			</ul>
+		</li>
+		<li><a href="brooklyn.html">Brooklyn</a>
+			<ul>
+				<li><a href="brooklynloc1.html">Brooklyn Botanical Garden</a></li>
+				<li><a href="brooklynloc2.html">Prospect Park</a></li>
+				<li><a href="brooklynloc3.html">Brooklyn Museum</a></li>
+				<li><a href="brooklynloc4.html">Brooklyn Bridge</a></li>
+			</ul>
+		</li>
+		<li><a href="queens.html">Queens</a>
+			<ul>
+				<li><a href="queensloc1.html">New York Hall of Science</a></li>
+				<li><a href="queensloc2.html">Citi Field</a></li>
+				<li><a href="queensloc3.html">Rockaway Beach</a></li>
+				<li><a href="queensloc4.html">Jamaica Bay Wildlife Refuge</a></li>
+			</ul>
+		</li>
+		<li><a href="statenisland.html">Staten Island</a>
+			<ul>
+				<li><a href="statenislandloc1.html">Alice Austen House</a></li>
+				<li><a href="statenislandloc2.html">Chinese Garden</a></li>
+				<li><a href="statenislandloc3.html">George Theater</a></li>
+				<li><a href="statenislandloc4.html">Staten Island Ferry</a></li>
+			</ul>
+		</li>
+		<li><a href="contactus.html">Contact Us</a></li>		
+	<ul>
+</nav>
+<div class="center_bottom_left">
+<img src="./images/contact_us.jpg" alt="skyline picture" style="width:100%;height:100%"></a>
+</div>
+
+<div class="center_bottom_right">
+<h1>Contact Us</h1></br>
+<h2>New York Travel</h2>
+300 Jay St, Brooklyn, NY 11201 </br>
+718-260-5000   </br>
+<a href="mailto:contactus@nytravel.com">contactus@nytravel.com</a></br></br>
+
+<form action="http://www.WebsiteDevelopmentBook.com/FormEcho.php" method="post"  onsubmit = "return ValidateForm(name, email, subject)">
+<table>
+<tr><td colspan="2">Visited our recommended attractions? Leave us your comment.</td></tr>
+<tr><td colspan="2"><input type="radio" name="ctype" value="question">I have a question</td></tr>
+<tr><td colspan="2"><input type="radio" name="ctype" value="like">I like something</td></tr>
+<tr><td colspan="2"><input type="radio" name="ctype" value="dislike">I dislike something</td></tr>
+<tr><td colspan="2"><input type="radio" name="ctype" value="suggestion">I have a suggestion</td></tr>
+<tr><td>Your Name</td><td><input type="input" name="name"/></td></tr>
+<tr><td>Your Email</td><td><input type="input" name="email"/></td></tr>
+<tr><td>Attraction you visited</td><td>
+					<select name="attractions">
+					<option value="s1">911 Memorial</option>
+					<option value="s2">Broadway Theater</option>
+					<option value="s3">Central Park</option>
+					<option value="s4">Metropolitan Museum of Art</option>
+					<option value="s5">Bronx Zoo</option>
+					<option value="s6">Bronx Botanical Garden</option>
+					<option value="s7">Yankee Stadium</option>
+					<option value="s8">Pelham Bay Park</option>
+					<option value="s9">Brooklyn Botanical Garden</option>
+					<option value="s10">Prospect Park</option>
+					<option value="s11">Brooklyn Museum</option>
+					<option value="s12">Brooklyn Bridge</option>
+					<option value="s13">New York Hall of Science</option>
+					<option value="s14">Citi Field</option>
+					<option value="s15">Rockaway Beach</option>
+					<option value="s16">Jamaica Bay Wildlife Refuge</option>
+					<option value="s17">Alice Austen House</option>
+					<option value="s18">Chinese Garden</option>
+					<option value="s19">George Theater</option>
+					<option value="s20">Staten Island Ferry</option>
+					<option value="s21">Other</option>
+					</select>
+					</td></tr>
+<tr><td>Subject</td><td><input type="input" name="subject"/></td></tr>
+<tr><td colspan="2">Comment:</br><textarea rows="20" cols="50" name="comment"/></textarea></td></tr>
+<tr><td><input type="submit" value="Click to Submit" /></td><td></td></tr>
+</form>
+</table>
+</div>
+</div>
+<div class="right_side" ></div>
+
+<script  src="./jscript/validate.js"></script>
+	
+</body>
+</html>

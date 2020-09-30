@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>Broadway Theater</title>
+
+<link rel="stylesheet" type="text/css" href="./css/slideshow.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+.slide1 {
+  background-image: url("./images/manhattanloc2_image1.jpg");
+}
+.slide2 {
+  background-image: url("./images/manhattanloc2_image2.jpg");
+}
+.slide3 {
+  background-image: url("./images/manhattanloc2_image3.jpg");
+}
+.slide4 {
+  background-image: url("./images/manhattanloc2_image4.jpg");
+}
+.slide5 {
+  background-image: url("./images/manhattanloc2_image5.jpg");
+}
+
+
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<!-- info box -->
+<div class="info_box">
+<h1>Broadway Theater</h1></br>
+The Broadway Theatre is one of only five playhouses that front on the street named Broadway. 
+It opened in 1924 as B. S. Moss’s Colony, a premiere film house. The most notable film that played 
+there in the early years was Walt Disney&#39;s Steamboat Willie which opened in 1928, and introduced 
+American audiences to an adorable rodent named Mickey Mouse. From 1934 to 1940, the house was once 
+again dedicated to motion picture exhibition, and offered the premiere of Disney’s Fantasia in 1939. 
+In 1940, however, it returned to legitimate stage production and, except for a brief stint as a Cinerama 
+movie theatre in the 1950s, has remained in the business of showcasing live theatre ever since. </br>
+Time of operation:</br>
+Varies depending on shows.</br>
+</br>
+</div>
+
+
+  <div id="arrow-left" class="arrow"></div>
+  <div class="slideshow_title"></div>
+  <div class="slidershow_infobox"></div>
+  <div id="slider">
+  
+    <div class="slide-out-button">
+	<i class="	fa fa-angle-left" aria-hidden="true"></i>
+	<div class="slide-out-title"><a  class= "link" href="manhattan.html" style="text-decoration:none">Back</a> </div>
+  </div>
+  
+    <div class="slide slide1">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+  
+	<div class="slide slide2">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+	
+    <div class="slide slide3">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="slide slide4">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+	<div class="slide slide5">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+	
+  </div>
+  <div id="arrow-right" class="arrow"></div>
+</div>
+
+<script>
+let sliderImages = document.querySelectorAll(".slide"),
+  arrowLeft = document.querySelector("#arrow-left"),
+  arrowRight = document.querySelector("#arrow-right"),
+  current = 0;
+
+// Clear all images
+function reset() {
+  for (let i = 0; i < sliderImages.length; i++) {
+    sliderImages[i].style.display = "none";
+  }
+}
+
+// Init slider
+function startSlide() {
+  reset();
+  sliderImages[0].style.display = "block";
+}
+
+// Show prev
+function slideLeft() {
+  reset();
+  sliderImages[current - 1].style.display = "block";
+  current--;
+}
+
+// Show next
+function slideRight() {
+  reset();
+  sliderImages[current + 1].style.display = "block";
+  current++;
+}
+
+// Left arrow click
+arrowLeft.addEventListener("click", function() {
+  if (current === 0) {
+    current = sliderImages.length;
+  }
+  slideLeft();
+});
+
+// Right arrow click
+arrowRight.addEventListener("click", function() {
+  if (current === sliderImages.length - 1) {
+    current = -1;
+  }
+  slideRight();
+});
+
+startSlide();
+	
+</script>
+</body>
+</html>

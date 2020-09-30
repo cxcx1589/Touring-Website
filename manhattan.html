@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Manhattan</title>
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/font.css">
+<style>
+
+
+body{
+	background-image:url(./images/skyline1.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-size:100% 100vh;
+	width:100%;
+	height:100%;
+	z-index: 1;
+}
+
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes move_marker {
+    0%   {transform:translateY(-5px)}
+    10%  {transform:translateY(-10px)}
+	20%  {transform:translateY(-15px)}
+	30%  {transform:translateY(-20px)}
+	40%  {transform:translateY(-25px)}
+	50%  {transform:translateY(-30px)}
+	60%  {transform:translateY(-25px)}
+	70%  {transform:translateY(-20px)}
+	80%  {transform:translateY(-15px)}
+	90%  {transform:translateY(-10px)}
+    100%  {transform:translateY(-5px)}
+}
+
+/* Standard syntax */
+@keyframes move_marker {
+    0%   {transform:translateY(-5px)}
+    10%  {transform:translateY(-10px)}
+	20%  {transform:translateY(-15px)}
+	30%  {transform:translateY(-20px)}
+	40%  {transform:translateY(-25px)}
+	50%  {transform:translateY(-30px)}
+	60%  {transform:translateY(-25px)}
+	70%  {transform:translateY(-20px)}
+	80%  {transform:translateY(-15px)}
+	90%  {transform:translateY(-10px)}
+    100%  {transform:translateY(-5px)}
+}
+
+#marker1:hover{
+	-webkit-transition:all 500ms;
+	-o-transition:all 500ms;
+	transition:all 500ms;
+	animation: move_marker .8s;
+	animation-iteration-count: infinite;
+}
+
+#marker2:hover{
+	-webkit-transition:all 500ms;
+	-o-transition:all 500ms;
+	transition:all 500ms;
+	animation: move_marker .8s;
+	animation-iteration-count: infinite;
+}
+
+
+#marker3:hover{
+	-webkit-transition:all 500ms;
+	-o-transition:all 500ms;
+	transition:all 500ms;
+	animation: move_marker .8s;
+	animation-iteration-count: infinite;
+}
+
+#marker4:hover{
+	-webkit-transition:all 500ms;
+	-o-transition:all 500ms;
+	transition:all 500ms;
+	animation: move_marker .8s;
+	animation-iteration-count: infinite;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- left social media bar code -->
+<div class="social">
+	<ul>
+		<li><a target="_blank" href="http://www.facebook.com" class="icon-facebook"></a></li>
+		<li><a target="_blank" href="http://www.twitter.com" class="icon-twitter"></a></li>
+		<li><a target="_blank" href="https://plus.google.com/discover" class="icon-google-plus"></a></li>
+		<li><a target="_blank" href="http://www.pinterest.com" class="icon-pinterest"></a></li>		
+	</ul>
+</div>
+
+<div class="top_graphic"></div>
+
+
+<div class="left_side"></div>
+
+
+<div class="center_side">
+
+<!-- Menu Bar Code --!>
+<!-- https://www.youtube.com/watch?v=rgUp302f_lY learn to do drop down menu from this video. I tried the div way but it was too complicated-->
+<nav>
+	<a href="index.html"><img src="./images/nyclogo_trans.gif" alt="nyclogo" style="width:45px;float:left"></a>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="manhattan.html">Manhattan</a>
+			<ul>
+				<li><a href="manhattanloc1.html">911 Memorial</a></li>
+				<li><a href="manhattanloc2.html">Broadway Theater</a></li>
+				<li><a href="manhattanloc3.html">Central Park</a></li>
+				<li><a href="manhattanloc4.html">Metropolitan Museum of Art</a></li>
+			</ul>
+		</li>
+		<li><a href="bronx.html">Bronx</a>
+			<ul>
+				<li><a href="bronxloc1.html">Bronx Zoo</a></li>
+				<li><a href="bronxloc2.html">Bronx Botanical Garden</a></li>
+				<li><a href="bronxloc3.html">Yankee Stadium</a></li>
+				<li><a href="bronxloc4.html">Pelham Bay Park</a></li>
+			</ul>
+		</li>
+		<li><a href="brooklyn.html">Brooklyn</a>
+			<ul>
+				<li><a href="brooklynloc1.html">Brooklyn Botanical Garden</a></li>
+				<li><a href="brooklynloc2.html">Prospect Park</a></li>
+				<li><a href="brooklynloc3.html">Brooklyn Museum</a></li>
+				<li><a href="brooklynloc4.html">Brooklyn Bridge</a></li>
+			</ul>
+		</li>
+		<li><a href="queens.html">Queens</a>
+			<ul>
+				<li><a href="queensloc1.html">New York Hall of Science</a></li>
+				<li><a href="queensloc2.html">Citi Field</a></li>
+				<li><a href="queensloc3.html">Rockaway Beach</a></li>
+				<li><a href="queensloc4.html">Jamaica Bay Wildlife Refuge</a></li>
+			</ul>
+		</li>
+		<li><a href="statenisland.html">Staten Island</a>
+			<ul>
+				<li><a href="statenislandloc1.html">Alice Austen House</a></li>
+				<li><a href="statenislandloc2.html">Chinese Garden</a></li>
+				<li><a href="statenislandloc3.html">George Theater</a></li>
+				<li><a href="statenislandloc4.html">Staten Island Ferry</a></li>
+			</ul>
+		</li>
+		<li><a href="contactus.html">Contact Us</a></li>		
+	<ul>
+</nav>
+
+<div class="center_bottom_left">
+
+ <img class="map_images" src="./images/manhattan_map.png" />
+	
+<!-- change top and left in style to change position of the markers -->
+<a href="manhattanloc1.html"><img onmouseleave="borough_info()" onmouseover="location1_info()"id="marker1" style="top:478px;left:16px" class="marker_image" src="./images/marker.png" alt="mapmarker"></a>
+<a href="manhattanloc2.html"><img onmouseleave="borough_info()" onmouseover="location2_info()"id="marker2" style="top:317px;left:92px" class="marker_image" src="./images/marker.png" alt="mapmarker"></a>
+<a href="manhattanloc3.html"><img onmouseleave="borough_info()" onmouseover="location3_info()"id="marker3" style="top:250px;left:120px" class="marker_image" src="./images/marker.png" alt="mapmarker"></a>
+<a href="manhattanloc4.html"><img onmouseleave="borough_info()" onmouseover="location4_info()"id="marker4" style="top:240px;left:150px" class="marker_image" src="./images/marker.png" alt="mapmarker"></a>
+
+</div>
+
+<div class="center_bottom_right" id="descriptionbox">
+<iframe width="100%" height="50%" src="https://www.youtube.com/embed/dHg5AaMDrJI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<h1>Manhattan</h1>
+<br>
+<br>
+Manhattan is the most densely populated borough of New York City, its economic and administrative center, and its historical birthplace. 
+Locally it is often referred to simply as The City. The borough is coextensive with New York County, one of the original counties of the U.S. 
+state of New York. The borough consists mostly of Manhattan Island, bounded by the Hudson, East, and Harlem rivers; several small adjacent islands; 
+and Marble Hill, a small neighborhood now on the U.S. mainland, physically connected to the Bronx and separated from the rest of Manhattan by the Harlem River. 
+Manhattan Island is divided into three informally bounded compartments aligned on its long axis: Midtown Manhattan, Lower Manhattan, and Upper Manhattan.
+</div>
+
+</div>
+
+<div class="right_side" ></div>
+
+<script>
+	function location1_info(){
+	document.getElementById("descriptionbox").innerHTML = "<h1>911 Memorial</h1></br>"+
+	"The National September 11 Memorial is a tribute of remembrance and honor to the 2,977 people killed in the terror attacks of "+
+	"September 11, 2001 at the World Trade Center site, near Shanksville, and at the Pentagon, as well as the six people killed in "+
+	"the World Trade Center bombing in February 1993. The Memorial&#39;s twin reflecting pools are each nearly an acre in size and feature "+
+	"the largest manmade waterfalls in North America.</br>"+
+	"Time of Operation:</br>"+
+	"9/11 Memorial - Daily, 7:30 am &#45; 9:00 pm</br>"+
+	"9/11 Memorial Museum</br>"+
+	"Sun.&#45;Thu., 9:00 am &#45; 8:00 pm with last entry at 6:00 pm</br>"+
+	"Fri. and Sat., 9:00 am &#45; 9:00 pm with last entry at 7:00 pm";
+	}
+	
+	function location2_info(){
+	document.getElementById("descriptionbox").innerHTML = "<h1>Broadway Theater</h1></br>"+
+	"The Broadway Theatre is one of only five playhouses that front on the street named Broadway. "+
+	"It opened in 1924 as B. S. Moss&#39;s Colony, a premiere film house. The most notable film that played "+
+	"there in the early years was Walt Disney&#39;s Steamboat Willie which opened in 1928, and introduced "+
+	"American audiences to an adorable rodent named Mickey Mouse. From 1934 to 1940, the house was once "+
+	"again dedicated to motion picture exhibition, and offered the premiere of Disney&#39;s Fantasia in 1939. "+
+	"In 1940, however, it returned to legitimate stage production and, except for a brief stint as a Cinerama "+
+	"movie theatre in the 1950s, has remained in the business of showcasing live theatre ever since.</br>"+
+	"Time of operation:</br>"+
+	"Varies depending on the show.";
+	}
+	
+	function location3_info(){
+	document.getElementById("descriptionbox").innerHTML = "<h1>Central Park</h1></br>"+
+	"Central Park was the first landscaped public park in the United States. Advocates for creating the park was primarily wealthy "+
+	"merchants and landowners that admired the public grounds of London and Paris and urged that New York needed a comparable facility "+
+	"to establish its international reputation. A public park, they argued, would offer their own families an attractive setting for carriage "+
+	"rides and provide working class New Yorkers with a healthy alternative to the saloon. After three years of debate over the park site and cost, "+
+	"in 1853 the state legislature authorized the City of New York to use the power of eminent domain to acquire more than 700 acres of land in "+
+	"the center of Manhattan.</br>"+
+	"Time of operation:</br>"+
+	"Opened 24/7";
+
+	}
+	function location4_info(){
+	document.getElementById("descriptionbox").innerHTML = "<h1>Metropolitan Museum of Art</h1></br>"+
+	"The Metropolitan Museum of Art's earliest roots date back to 1866 in Paris, France, when a group "+
+	"of Americans agreed to create a &#34;national institution and gallery of art&#34; to bring art and art "+
+	"education to the American people. The lawyer John Jay, who proposed the idea, swiftly moved forward "+
+	"with the project upon his return to the United States from France. Under Jay's presidency, the Union League "+
+	"Club in New York rallied civic leaders, businessmen, artists, art collectors, and philanthropists to the cause. "+
+	"On April 13, 1870, The Metropolitan Museum of Art was incorporated, opening to the public in the Dodworth Building "+
+	"at 681 Fifth Avenue. On November 20 of that same year, the Museum acquired its first object, a Roman sarcophagus. </br>"+
+	"Time of operation:</br>"+
+	"Sunday&#45;Thursday: 10:00am &#45; 5:30pm</br>"+
+	"Friday and Saturday: 10:00am &#45; 9:00pm</br>";
+	}
+	function borough_info(){
+	document.getElementById("descriptionbox").innerHTML =
+	"<iframe width='100%' height='50%' src='https://www.youtube.com/embed/dHg5AaMDrJI?rel=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"+
+	"<h1>Manhattan</h1></br>"+
+	"Manhattan is the most densely populated borough of New York City, its economic and administrative center, "+
+	"and its historical birthplace. Locally it is often referred to simply as The City. The borough is coextensive "+
+	"with New York County, one of the original counties of the U.S. state of New York. The borough consists mostly "+
+	"of Manhattan Island, bounded by the Hudson, East, and Harlem rivers; several small adjacent islands; and Marble "+
+	"Hill, a small neighborhood now on the U.S. mainland, physically connected to the Bronx and separated from the rest "+
+	"of Manhattan by the Harlem River. Manhattan Island is divided into three informally bounded compartments aligned "+
+	"on its long axis: Midtown Manhattan, Lower Manhattan, and Upper Manhattan.";
+	}
+	
+</script>
+	
+</body>
+</html>

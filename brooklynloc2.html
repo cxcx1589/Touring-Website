@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>Prospect Park</title>
+<link rel="stylesheet" type="text/css" href="./css/slideshow.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+.slide1 {
+  background-image: url("./images/brooklynloc2_image1.jpg");
+}
+.slide2 {
+  background-image: url("./images/brooklynloc2_image2.jpg");
+}
+.slide3 {
+  background-image: url("./images/brooklynloc2_image3.jpg");
+}
+.slide4 {
+  background-image: url("./images/brooklynloc2_image4.jpg");
+}
+.slide5 {
+  background-image: url("./images/brooklynloc2_image5.jpg");
+}
+.slide6 {
+  background-image: url("./images/brooklynloc2_image6.jpg");
+}
+
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<!-- info box -->
+<div class="info_box">
+<h1>Prospect Park</h1>
+</br>
+A stroll through Prospect Park is an easy way to spend a memorable day. Designed by Frederick Law Olmsted after the completion of Central Park, it boasts 90 acres of wide, open fields for baseball and soccer, trails for running (the loop is 3.35 miles), bike riding, and horseback riding; summer concerts at the Prospect Park Bandshell; an all-season ice skating rink at the LeFrak Center; and several playgrounds. The park also has a zoo with a barn housing goats, chickens, horses, alpacas and sheep for feeding, a sea lion show, prairie dog burrows, cuddly meerkats, a duck pond and a huge aviary. Steps from the zoo is the magnificent 1912 Prospect Park Carousel, and one of the city's biggest greenmarkets sets up shop every Saturday at the north entrance at Grand Army Plaza.
+</div>
+
+
+  <div id="arrow-left" class="arrow"></div>
+  <div class="slideshow_title"></div>
+  <div class="slidershow_infobox"></div>
+  <div id="slider">
+    
+<div class="slide-out-button">
+	<i class="	fa fa-angle-left" aria-hidden="true"></i>
+	<div class="slide-out-title"><a  class= "link" href="brooklyn.html" style="text-decoration:none">Back</a> </div>
+ </div>
+  
+    <div class="slide slide1">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+  
+	<div class="slide slide2">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+	
+    <div class="slide slide3">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="slide slide4">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="slide slide5">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+	
+	<div class="slide slide6">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+	
+  </div>
+  <div id="arrow-right" class="arrow"></div>
+</div>
+
+<script>
+let sliderImages = document.querySelectorAll(".slide"),
+  arrowLeft = document.querySelector("#arrow-left"),
+  arrowRight = document.querySelector("#arrow-right"),
+  current = 0;
+
+// Clear all images
+function reset() {
+  for (let i = 0; i < sliderImages.length; i++) {
+    sliderImages[i].style.display = "none";
+  }
+}
+
+// Init slider
+function startSlide() {
+  reset();
+  sliderImages[0].style.display = "block";
+}
+
+// Show prev
+function slideLeft() {
+  reset();
+  sliderImages[current - 1].style.display = "block";
+  current--;
+}
+
+// Show next
+function slideRight() {
+  reset();
+  sliderImages[current + 1].style.display = "block";
+  current++;
+}
+
+// Left arrow click
+arrowLeft.addEventListener("click", function() {
+  if (current === 0) {
+    current = sliderImages.length;
+  }
+  slideLeft();
+});
+
+// Right arrow click
+arrowRight.addEventListener("click", function() {
+  if (current === sliderImages.length - 1) {
+    current = -1;
+  }
+  slideRight();
+});
+
+startSlide();
+	
+</script>
+</body>
+</html>

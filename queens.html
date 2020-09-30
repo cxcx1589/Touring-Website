@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Queens</title>
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/font.css">
+<style>
+
+
+body{
+	background-image:url(./images/skyline1.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-size:100% 100vh;
+	width:100%;
+	height:100%;
+	z-index: 1;
+}
+
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes move_marker {
+    0%   {transform:translateY(-5px)}
+    10%  {transform:translateY(-10px)}
+	20%  {transform:translateY(-15px)}
+	30%  {transform:translateY(-20px)}
+	40%  {transform:translateY(-25px)}
+	50%  {transform:translateY(-30px)}
+	60%  {transform:translateY(-25px)}
+	70%  {transform:translateY(-20px)}
+	80%  {transform:translateY(-15px)}
+	90%  {transform:translateY(-10px)}
+    100%  {transform:translateY(-5px)}
+}
+
+/* Standard syntax */
+@keyframes move_marker {
+    0%   {transform:translateY(-5px)}
+    10%  {transform:translateY(-10px)}
+	20%  {transform:translateY(-15px)}
+	30%  {transform:translateY(-20px)}
+	40%  {transform:translateY(-25px)}
+	50%  {transform:translateY(-30px)}
+	60%  {transform:translateY(-25px)}
+	70%  {transform:translateY(-20px)}
+	80%  {transform:translateY(-15px)}
+	90%  {transform:translateY(-10px)}
+    100%  {transform:translateY(-5px)}
+}
+
+#marker1:hover{
+	-webkit-transition:all 500ms;
+	-o-transition:all 500ms;
+	transition:all 500ms;
+	animation: move_marker .8s;
+	animation-iteration-count: infinite;
+}
+
+#marker2:hover{
+	-webkit-transition:all 500ms;
+	-o-transition:all 500ms;
+	transition:all 500ms;
+	animation: move_marker .8s;
+	animation-iteration-count: infinite;
+}
+
+
+#marker3:hover{
+	-webkit-transition:all 500ms;
+	-o-transition:all 500ms;
+	transition:all 500ms;
+	animation: move_marker .8s;
+	animation-iteration-count: infinite;
+}
+
+#marker4:hover{
+	-webkit-transition:all 500ms;
+	-o-transition:all 500ms;
+	transition:all 500ms;
+	animation: move_marker .8s;
+	animation-iteration-count: infinite;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- left social media bar code -->
+<div class="social">
+	<ul>
+		<li><a target="_blank" href="http://www.facebook.com" class="icon-facebook"></a></li>
+		<li><a target="_blank" href="http://www.twitter.com" class="icon-twitter"></a></li>
+		<li><a target="_blank" href="https://plus.google.com/discover" class="icon-google-plus"></a></li>
+		<li><a target="_blank" href="http://www.pinterest.com" class="icon-pinterest"></a></li>	
+	</ul>
+</div>
+
+<div class="top_graphic"></div>
+
+
+<div class="left_side"></div>
+
+
+<div class="center_side">
+
+<!-- Menu Bar Code --!>
+<!-- https://www.youtube.com/watch?v=rgUp302f_lY learn to do drop down menu from this video. I tried the div way but it was too complicated-->
+<nav>
+	<a href="index.html"><img src="./images/nyclogo_trans.gif" alt="nyclogo" style="width:45px;float:left"></a>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="manhattan.html">Manhattan</a>
+			<ul>
+				<li><a href="manhattanloc1.html">911 Memorial</a></li>
+				<li><a href="manhattanloc2.html">Broadway Theater</a></li>
+				<li><a href="manhattanloc3.html">Central Park</a></li>
+				<li><a href="manhattanloc4.html">Metropolitan Museum of Art</a></li>
+			</ul>
+		</li>
+		<li><a href="bronx.html">Bronx</a>
+			<ul>
+				<li><a href="bronxloc1.html">Bronx Zoo</a></li>
+				<li><a href="bronxloc2.html">Bronx Botanical Garden</a></li>
+				<li><a href="bronxloc3.html">Yankee Stadium</a></li>
+				<li><a href="bronxloc4.html">Pelham Bay Park</a></li>
+			</ul>
+		</li>
+		<li><a href="brooklyn.html">Brooklyn</a>
+			<ul>
+				<li><a href="brooklynloc1.html">Brooklyn Botanical Garden</a></li>
+				<li><a href="brooklynloc2.html">Prospect Park</a></li>
+				<li><a href="brooklynloc3.html">Brooklyn Museum</a></li>
+				<li><a href="brooklynloc4.html">Brooklyn Bridge</a></li>
+			</ul>
+		</li>
+		<li><a href="queens.html">Queens</a>
+			<ul>
+				<li><a href="queensloc1.html">New York Hall of Science</a></li>
+				<li><a href="queensloc2.html">Citi Field</a></li>
+				<li><a href="queensloc3.html">Rockaway Beach</a></li>
+				<li><a href="queensloc4.html">Jamaica Bay Wildlife Refuge</a></li>
+			</ul>
+		</li>
+		<li><a href="statenisland.html">Staten Island</a>
+			<ul>
+				<li><a href="statenislandloc1.html">Alice Austen House</a></li>
+				<li><a href="statenislandloc2.html">Chinese Garden</a></li>
+				<li><a href="statenislandloc3.html">George Theater</a></li>
+				<li><a href="statenislandloc4.html">Staten Island Ferry</a></li>
+			</ul>
+		</li>
+		<li><a href="contactus.html">Contact Us</a></li>		
+	<ul>
+</nav>
+
+<div class="center_bottom_left">
+
+<img class="map_images" src="./images/queens_map.png" />
+
+<!-- change top and left in style to change position of the markers -->
+<a href="queensloc1.html"><img onmouseleave="borough_info()" onmouseover="location1_info()"id="marker1" style="top:85px;left:160px" class="marker_image" src="./images/marker.png" alt="mapmarker"></a>
+<a href="queensloc2.html"><img onmouseleave="borough_info()" onmouseover="location2_info()"id="marker2" style="top:40px;left:155px" class="marker_image" src="./images/marker.png" alt="mapmarker"></a>
+<a href="queensloc3.html"><img onmouseleave="borough_info()" onmouseover="location3_info()"id="marker3" style="top:380px;left:140px" class="marker_image" src="./images/marker.png" alt="mapmarker"></a>
+<a href="queensloc4.html"><img onmouseleave="borough_info()" onmouseover="location4_info()"id="marker4" style="top:290px;left:180px" class="marker_image" src="./images/marker.png" alt="mapmarker"></a>
+	
+	
+</div>
+
+<div class="center_bottom_right" id="descriptionbox">
+<iframe width="100%" height="50%" src="https://www.youtube.com/embed/j2SXLblJzQI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<h1>Queens</h1>
+<br>
+Queens is the easternmost and largest in area of the five boroughs of New York City. It is 
+geographically adjacent to the borough of Brooklyn at the southwestern end of Long Island, and to Nassau 
+County farther east on Long Island; in addition, Queens shares water borders with the boroughs of Manhattan 
+and the Bronx. Queens was established in 1683 as one of the original 12 counties of New York. 
+</div>
+
+</div>
+
+<div class="right_side" ></div>
+
+<script>
+	function location1_info(){
+	document.getElementById("descriptionbox").innerHTML = "<h1>New York Hall of Science</h1></br></br>"+
+	"The New York Hall of Science, also known as NYSCI, is a science museum located in Flushing Meadows-Corona Park "+
+	"in the New York City borough of Queens, in the section of the park that is in Corona.";
+	}
+	
+	function location2_info(){
+	document.getElementById("descriptionbox").innerHTML = "<h1>Citi Field</h1></br></br>"+
+	"Citi Field is a baseball park located in Flushing Meadows–Corona Park in the New York City borough of Queens. ";
+	"Completed in 2009, it is the home field of the New York Mets of the National League division of Major League ";
+	"Baseball.";
+	}
+	
+	function location3_info(){
+	document.getElementById("descriptionbox").innerHTML = "<h1>Rockaway Beach</h1></br></br>"+
+	"Rockaway Beach is a neighborhood on the Rockaway Peninsula in the New York City borough of Queens. "+
+	"It is located on the South Shore of Long Island. The neighborhood is bounded by Arverne to the east "+
+	"and Rockaway Park to the west.";
+	}
+	function location4_info(){
+	document.getElementById("descriptionbox").innerHTML = "<h1>Jamaica Bay Wildlife Refuge</h1></br></br>"+
+	"Jamaica Bay Wildlife Refuge is a wildlife refuge in New York City managed by the National Park Service as part of Gateway National Recreation Area.";
+	}
+	function borough_info(){
+	document.getElementById("descriptionbox").innerHTML = 
+	"<iframe width='100%' height='50%' src='https://www.youtube.com/embed/j2SXLblJzQI' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"+
+	"<h1>Queens</h1></br>"+
+	"Queens is the easternmost and largest in area of the five boroughs of New York City. It is geographically "+
+	"adjacent to the borough of Brooklyn at the southwestern end of Long Island, and to Nassau County farther "+
+	"east on Long Island; in addition, Queens shares water borders with the boroughs of Manhattan and the Bronx. "+
+	"Queens was established in 1683 as one of the original 12 counties of New York. "
+	}
+</script>
+	
+</body>
+</html>

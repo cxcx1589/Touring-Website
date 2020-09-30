@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>Bronx Zoo</title>
+
+<link rel="stylesheet" type="text/css" href="./css/slideshow.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+.slide1 {
+  background-image: url("./images/bronx2.jpg");
+}
+.slide2 {
+  background-image: url("./images/bronx3.jpg");
+}
+.slide3 {
+  background-image: url("./images/bronx4.jpg");;
+}
+.slide4 {
+  background-image: url("./images/bronx5.jpg");
+}
+.slide5 {
+  background-image: url("./images/bronx6.jpg");
+}
+
+}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<!-- info box -->
+<div class="info_box">
+<h1>Bronx Zoo</h1>
+</br>
+The Bronx Zoo is a zoo located within Bronx Park in the Bronx,
+a borough of New York City. It is the largest metropolitan zoo in
+the United States and among the largest in the world. On average,
+the zoo has 2.15 million visitors each year, and it comprises 265 acres (107 ha)
+of park lands and naturalistic habitats, through which the Bronx River flows. <br><br>
+ Monday-Sunday
+ 10AM-5:00PM
+
+</div>
+
+  <div id="arrow-left" class="arrow"></div>
+  <div class="slideshow_title"></div>
+  <div class="slidershow_infobox"></div>
+  <div id="slider">
+
+    <div class="slide-out-button">
+  <i class="	fa fa-angle-left" aria-hidden="true"></i>
+  <div class="slide-out-title"><a  class= "link" href="bronx.html" style="text-decoration:none">Back</a> </div>
+</div>
+
+
+
+    <div class="slide slide1">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+	<div class="slide slide2">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="slide slide3">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="slide slide4">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="slide slide5">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+  </div>
+  <div id="arrow-right" class="arrow"></div>
+</div>
+
+<script>
+let sliderImages = document.querySelectorAll(".slide"),
+  arrowLeft = document.querySelector("#arrow-left"),
+  arrowRight = document.querySelector("#arrow-right"),
+  current = 0;
+
+// Clear all images
+function reset() {
+  for (let i = 0; i < sliderImages.length; i++) {
+    sliderImages[i].style.display = "none";
+  }
+}
+
+// Init slider
+function startSlide() {
+  reset();
+  sliderImages[0].style.display = "block";
+}
+
+// Show prev
+function slideLeft() {
+  reset();
+  sliderImages[current - 1].style.display = "block";
+  current--;
+}
+
+// Show next
+function slideRight() {
+  reset();
+  sliderImages[current + 1].style.display = "block";
+  current++;
+}
+
+// Left arrow click
+arrowLeft.addEventListener("click", function() {
+  if (current === 0) {
+    current = sliderImages.length;
+  }
+  slideLeft();
+});
+
+// Right arrow click
+arrowRight.addEventListener("click", function() {
+  if (current === sliderImages.length - 1) {
+    current = -1;
+  }
+  slideRight();
+});
+
+startSlide();
+
+</script>
+</body>
+</html>

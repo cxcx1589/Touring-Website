@@ -1,0 +1,157 @@
+<html>
+<head>
+<title>911 Memorial</title>
+
+<link rel="stylesheet" type="text/css" href="./css/slideshow.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+.slide1 {
+  background-image: url("./images/manhattanloc1_image1.jpg");
+}
+.slide2 {
+  background-image: url("./images/manhattanloc1_image2.jpg");
+}
+.slide3 {
+  background-image: url("./images/manhattanloc1_image3.jpg");
+}
+.slide4 {
+  background-image: url("./images/manhattanloc1_image4.jpg");
+}
+.slide5 {
+  background-image: url("./images/manhattanloc1_image5.jpg");
+}
+.slide6 {
+  background-image: url("./images/manhattanloc1_image6.jpg");
+}
+
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<!-- info box -->
+<div class="info_box">
+<h1>911 Memorial</h1></br>
+The National September 11 Memorial is a tribute of remembrance and honor to the 2,977 people killed in the terror attacks of 
+September 11, 2001 at the World Trade Center site, near Shanksville, and at the Pentagon, as well as the six people killed in 
+the World Trade Center bombing in February 1993. The Memorial&#39;s twin reflecting pools are each nearly an acre in size and feature 
+the largest manmade waterfalls in North America. </br>
+Time of Operation:</br>
+9/11 Memorial - Daily, 7:30 am &#45; 9:00 pm</br>
+9/11 Memorial Museum</br>
+Sun.&#45;Thu., 9:00 am &#45; 8:00 p.m. with last entry at 6:00 pm</br>
+Fri. and Sat., 9:00 am &#45; 9:00 pm with last entry at 7:00 pm
+</br>
+</div>
+
+  <div id="arrow-left" class="arrow"></div>
+  <div class="slideshow_title"></div>
+  <div class="slidershow_infobox"></div>
+ 
+
+  <div id="slider">
+  
+	<div class="slide-out-button">
+	<i class="	fa fa-angle-left" aria-hidden="true"></i>
+	<div class="slide-out-title"><a href="manhattan.html" style="text-decoration:none">Back</a> </div>
+	</div>
+  
+ 
+  
+    <div class="slide slide1">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+  
+	<div class="slide slide2">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+	
+    <div class="slide slide3">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="slide slide4">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+	
+	 <div class="slide slide5">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+	
+	<div class="slide slide6">
+      <div class="slide-content">
+        <span></span>
+      </div>
+    </div>
+	
+  </div>
+  <div id="arrow-right" class="arrow"></div>
+</div>
+
+<script>
+let sliderImages = document.querySelectorAll(".slide"),
+  arrowLeft = document.querySelector("#arrow-left"),
+  arrowRight = document.querySelector("#arrow-right"),
+  current = 0;
+
+// Clear all images
+function reset() {
+  for (let i = 0; i < sliderImages.length; i++) {
+    sliderImages[i].style.display = "none";
+  }
+}
+
+// Init slider
+function startSlide() {
+  reset();
+  sliderImages[0].style.display = "block";
+}
+
+// Show prev
+function slideLeft() {
+  reset();
+  sliderImages[current - 1].style.display = "block";
+  current--;
+}
+
+// Show next
+function slideRight() {
+  reset();
+  sliderImages[current + 1].style.display = "block";
+  current++;
+}
+
+// Left arrow click
+arrowLeft.addEventListener("click", function() {
+  if (current === 0) {
+    current = sliderImages.length;
+  }
+  slideLeft();
+});
+
+// Right arrow click
+arrowRight.addEventListener("click", function() {
+  if (current === sliderImages.length - 1) {
+    current = -1;
+  }
+  slideRight();
+});
+
+startSlide();
+	
+</script>
+</body>
+</html>
